@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+
+:root {
+  --base-color: #eee;
+  --text-color: #333;
+  --shadow-color: #b8b9be;
+  --light-color: rgb(243, 243, 243);
+  --shadow-radius: 2px;
+  --light-radius: 3px;
+}
+
+:root {
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.9rem;
+}
+
+body {
+  @apply bg-slate-100 dark:bg-slate-900
+}
+
+h1,h2,h3,p,summary,li {
+  @apply text-gray-800 dark:text-gray-300 border-gray-500
+}
+
+hr {
+  @apply dark:border-gray-600 my-2
+}
+
+.markdown {
+  pre {
+    white-space: pre-wrap;
+  }
+  h1, h2, h3 {
+    @apply pb-1 border-b border-b-slate-300 dark:text-gray-300 dark:border-gray-500
+  }
+  h1 {
+    @apply text-3xl mb-6 mt-10 font-bold 
+  }
+  h2 {
+    @apply text-2xl my-4 mt-8 font-medium
+  }
+  h3 {
+    @apply text-xl my-2 mt-6 font-medium
+  }
+
+  :not(pre) > code {
+    @apply p-1 neum-inset text-sm mx-1 text-orange-700 dark:text-lime-500 dark:bg-slate-900
+  }
+
+  pre > code {
+    font-family: Consolas;
+    line-height: 1.5em;
+    @apply block p-2 neum-inset my-4 dark:bg-slate-900 dark:text-gray-300
+  }
+
+  p > img {
+    @apply my-3
+  }
+
+  a {
+    @apply underline text-blue-400
+  }
+}
+
+.neum {
+  @apply nm-flat-white dark:nm-flat-slate-900
+}
+
+.neum-inset {
+  @apply nm-inset-white dark:nm-inset-slate-900
+}
+
+.neum-convex {
+  @apply nm-convex-white dark:nm-convex-slate-900
+}
+
+.interactive {
+  cursor: pointer;
+}
+.neum.interactive.flat {
+  @apply shadow-none;
+}
+.neum.interactive, .neum-convex.interactive, .neum-inset.interactive {
+  @apply hover:nm-concave-white active:nm-inset-white dark:hover:nm-concave-slate-900 dark:active:nm-inset-slate-900
+}
+
+.neum-sm {
+  @apply nm-flat-white-sm dark:nm-flat-slate-900-sm
+}
+
+.neum-inset-sm {
+  @apply nm-inset-white-xs dark:nm-inset-slate-900-sm
+}
+
+.neum-convex-sm {
+  @apply nm-convex-white-xs dark:nm-convex-slate-900-sm
+}
+
+.neum-sm.interactive, .neum-convex-sm.interactive, .neum-inset-sm.interactive {
+  @apply hover:nm-concave-white-xs active:nm-inset-white-sm dark:hover:nm-concave-slate-900-sm dark:active:nm-inset-slate-900-sm
+}
