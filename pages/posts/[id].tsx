@@ -1,8 +1,8 @@
 import { AllPostMeta, getPost, Post, PostMeta } from "../../post";
 import { marked } from "marked"
 import Markdown from "../../components/Markdown";
-import TwitterIcon from "../../components/TwitterIcon";
-import FacebookIcon from "../../components/FacebookIcon";
+import TwitterIcon from "../../components/icons/TwitterIcon";
+import FacebookIcon from "../../components/icons/FacebookIcon";
 import TableOfContents from "../../components/TableOfContents";
 import PostSummary from "../../components/PostSummary";
 import TwitterWidget from "../../components/TwitterWidget";
@@ -10,6 +10,7 @@ import Head from "next/head";
 import Header from "../../components/Header";
 import { extractDescription } from "../../helpers";
 import CategoryBadge from "../../components/CategoryBadge";
+import Footer from "../../components/Footer";
 
 export function getStaticPaths() {
     return {
@@ -56,7 +57,7 @@ export default function PostPage({ post, readNexts, recentPosts }: StaticProps) 
         </Head>
         <Header />
         <main className="flex flex-row justify-center">
-            <aside className="sm:hidden flex-1 flex flex-col justify-center items-end max-w-xs sticky top-0 h-full">
+            <aside className="hidden lg:flex flex-1 flex-col justify-center items-end max-w-xs sticky top-0 h-full">
                 <a className="block mt-8 mr-6 rounded-full neum-sm interactive"
                     onClick={() => {
                         window.open(`http://twitter.com/share?url=${encodeURIComponent(location.href)
@@ -75,7 +76,7 @@ export default function PostPage({ post, readNexts, recentPosts }: StaticProps) 
                         className="fill-gray-400 p-3" />
                 </a>
             </aside>
-            <article className="p-8 sm:p-4 max-w-4xl sm:w-full neum rounded-lg">
+            <article className="p-4 lg:p-8 max-w-4xl xs:w-full sm:w-full neum rounded-lg mb-2">
                 <div className="mb-4">
                     <h1 className="text-3xl text-bold text-center mb-4"><a href="#">{post.title}</a></h1>
                     <p className="text-center text-sm text-gray-500 pb-4">
@@ -85,21 +86,22 @@ export default function PostPage({ post, readNexts, recentPosts }: StaticProps) 
                         {post.updated_at && <span className="pr-2">
                             Updated: {post.updated_at.toLocaleDateString()}
                         </span>}
-                        <span>
+                        {post.tags && <span>
                             Tags:
-                        </span>
+                        </span>}
                         {post.tags?.map(tag => (<CategoryBadge key={tag} category={tag} />))}
                     </p>
                 </div>
                 <hr/>
                 <Markdown markdown={post.markdown} />
             </article>
-            <aside className="sm:hidden flex-1 sticky h-full top-0 p-8 max-w-xs">
+            <aside className="hidden lg:block flex-1 sticky h-full top-0 p-8 max-w-xs">
                 <TableOfContents />
                 <TwitterWidget />
             </aside>
         </main>
-        <footer style={{ minHeight: "600px" }} className="mt-4">
+        <hr/>
+        <div role="read-next" style={{ minHeight: "600px" }} className="mt-4">
             <div className="w-2/3  mx-auto sm:w-full flex xs:block">
                 <div className="w-1/2 xs:w-full p-4">
                     <h2 className="text-lg text-gray-500">関連記事</h2>
@@ -114,6 +116,7 @@ export default function PostPage({ post, readNexts, recentPosts }: StaticProps) 
                     ))}
                 </div>
             </div>
-        </footer>
+        </div>
+        <Footer/>
     </>
 }

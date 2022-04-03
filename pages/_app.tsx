@@ -3,7 +3,6 @@ import { AppProps } from 'next/app'
 import { useEffect } from 'react';
 import '../styles/globals.scss'
 import "core-js/features/string/replace-all"
-
 function getTheme(): "light" | "dark" {
   if (typeof window === "undefined") return "light";
   const theme = localStorage.getItem("theme");
@@ -13,7 +12,8 @@ function getTheme(): "light" | "dark" {
   if (window.matchMedia('(prefers-color-scheme: dark)').matches) return "dark";
 }
 
-export const themeAtom = atom("light");
+export const themeAtom = atom<"light" | "dark">("light");
+export const langAtom = atom<"JP" | "EN">("EN");
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = useAtom(themeAtom);
@@ -30,7 +30,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       localStorage.setItem("theme", theme);
     }
   }, [theme])
-  return <Component {...pageProps} />
+  return <>
+    <Component {...pageProps} />
+  </>
 }
 
 export default MyApp

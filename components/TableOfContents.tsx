@@ -15,7 +15,7 @@ export default function TableOfContents() {
     }, [hs])
 
     const getListClass = (h: HTMLHeadingElement) => {
-        let ret = "block font-medium py-2 border last:rounded-b-lg dark:border-gray-800";
+        let ret = "block font-medium py-2 border last:rounded-b-lg border-gray-200 dark:border-gray-800";
         switch (h.tagName) {
             case "H1": ret += " text-lg pl-1"; break;
             case "H2": ret += " text-md pl-2"; break;
@@ -31,7 +31,7 @@ export default function TableOfContents() {
     }
 
     return <div className="rounded-lg neum p-4 text-gray-500 dark:text-gray-300">
-        <p className="text-lg text-center mb-1">Table of Contents</p>
+        <p className="text-lg text-center mb-1 text-gray-500">Table of Contents</p>
         <div>
             {hs.map((h, index) => (
                 <a key={index}

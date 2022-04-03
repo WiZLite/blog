@@ -1,5 +1,4 @@
 ---
-created_at: 2021-04-29
 updated_at: 2021-11-09
 tags: ["csharp", "Unity"]
 title: MessagePipe入門 序

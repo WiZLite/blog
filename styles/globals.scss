@@ -21,12 +21,22 @@ body {
   @apply bg-slate-100 dark:bg-slate-900
 }
 
-h1,h2,h3,p,summary,li {
+h1,h2,h3,p,summary,li,a {
   @apply text-gray-800 dark:text-gray-300 border-gray-500
 }
 
+h1 {
+  @apply text-3xl
+}
+h2 {
+  @apply text-2xl
+}
+h3 {
+  @apply text-xl
+}
+
 hr {
-  @apply dark:border-gray-600 my-2
+  @apply nm-inset-white-xs dark:nm-inset-slate-900-xs h-1 border-0
 }
 
 .markdown {

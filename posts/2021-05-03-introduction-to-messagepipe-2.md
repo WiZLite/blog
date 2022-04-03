@@ -1,5 +1,4 @@
 ---
-created_at: 2022-05-03
 updated_at: 2022-05-06
 tags: [csharp, Unity]
 title: MessagePipe入門 破

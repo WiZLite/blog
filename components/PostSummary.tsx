@@ -15,15 +15,17 @@ function PostSummaryInternal({ post }: Props) {
             <Link href={`/posts/${post.id}`} >
                 <a className="text-lg text-gray-700 dark:text-gray-300 font-medium">{post.title}</a>
             </Link>
-            <hr className="xs:hidden"/>
+            <hr className="xs:hidden" />
             <span>
                 <span className="ml-2 text-gray-500 text-sm">
                     Created: {post.created_at.toLocaleDateString()}
                 </span>
-                <span className="ml-2 text-gray-500 text-sm">
-                    Updated: {post.updated_at.toLocaleDateString()}
-                </span>
-                <br className="xs:hidden"/>
+                {post.updated_at &&
+                    <span className="ml-2 text-gray-500 text-sm">
+                        Updated: {post.updated_at.toLocaleDateString()}
+                    </span>
+                }
+                <br className="xs:hidden" />
                 <span className="text-gray-800 justify-self-end">
                     {post.tags?.map(tag => <CategoryBadge category={tag} key={tag} />)}
                 </span>
