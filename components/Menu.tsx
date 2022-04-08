@@ -6,7 +6,7 @@ export default function Menu() {
             <a className="p-2 neum interactive text-gray-500">Blog</a>
         </Link>
         <Link href="#">
-            <a title="coming soon" className="p-2 neum text-gray-300"><del>Works</del></a>
+            <a data-tip="Coming soon!" title="coming soon" className="p-2 neum text-gray-300"><del>Works</del></a>
         </Link>
         <Link href="/profile">
             <a className="p-2 neum interactive text-gray-500">About</a>

@@ -3,6 +3,7 @@ import { AppProps } from 'next/app'
 import { useEffect } from 'react';
 import '../styles/globals.scss'
 import "core-js/features/string/replace-all"
+import ReactTooltip from 'react-tooltip';
 function getTheme(): "light" | "dark" {
   if (typeof window === "undefined") return "light";
   const theme = localStorage.getItem("theme");
@@ -31,6 +32,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     }
   }, [theme])
   return <>
+    <ReactTooltip backgroundColor='white'  textColor='black'/>
     <Component {...pageProps} />
   </>
 }

@@ -73,6 +73,10 @@ hr {
   a {
     @apply underline text-blue-400
   }
+
+  li {
+    list-style: inside;
+  }
 }
 
 .neum {

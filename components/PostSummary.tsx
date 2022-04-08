@@ -10,7 +10,7 @@ interface Props {
 function PostSummaryInternal({ post }: Props) {
     return (
         <article
-            className=" p-3 m-2 w-76 sm:w-full xs:w-full neum hover:neum-concave active:neum-inset 
+            className=" p-3 m-2 w-72 sm:w-full xs:w-full neum hover:neum-concave active:neum-inset 
             rounded-lg flex flex-col justify-between">
             <Link href={`/posts/${post.id}`} >
                 <a className="text-lg text-gray-700 dark:text-gray-300 font-medium">{post.title}</a>

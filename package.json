@@ -23,6 +23,7 @@
     "next-remote-watch": "^1.0.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-tooltip": "^4.2.21",
     "remark": "^14.0.2",
     "remark-html": "^15.0.1",
     "superjson": "^1.8.1",

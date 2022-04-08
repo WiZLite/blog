@@ -8,12 +8,7 @@ export default function Footer() {
     const [theme] = useAtom(themeAtom);
     return (
         <>
-            <hr 
-                className="border-none"
-                style={{
-                boxShadow: theme === "light" ? "0 1px 2px 1px rgb(0,0,0, .1), 0 3px 1px 1px white"
-                    : "0 1px 2px 1px #25213a, 0 -1px 2px 1px #000000"
-            }} />
+            <hr className="border-none mt-4" />
             <footer className="p-4">
                 {/* <div className="flex justify-center my-4"></div> */}
                 <div className="mx-auto flex justify-center">
