@@ -76,7 +76,7 @@ export default function PostPage({ post, readNexts, recentPosts }: StaticProps) 
                         className="fill-gray-400 p-3" />
                 </a>
             </aside>
-            <article className="p-4 lg:p-8 max-w-4xl xs:w-full sm:w-full neum rounded-lg mb-2">
+            <article className="p-6 lg:p-8 max-w-4xl xs:w-full sm:w-full neum rounded-lg mb-2">
                 <div className="mb-4">
                     <h1 className="text-3xl text-bold text-center mb-4"><a href="#">{post.title}</a></h1>
                     <p className="text-center text-sm text-gray-500 pb-4">

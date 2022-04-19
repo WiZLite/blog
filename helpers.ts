@@ -1,5 +1,8 @@
 export function getUrlHash(text: string): string {
-    return `#${text.toLowerCase().replaceAll("/", "").replaceAll(" ", "-").replaceAll(",", "")}`
+    return `#${text.toLowerCase()
+        .replaceAll(" ", "-")
+        .replaceAll("　", "-")
+        .replaceAll(/[^0-9a-zA-Zぁ-んァ-ヶｱ-ﾝﾞﾟ一-龠ー「」]/g, "")}`
 }
 
 export function extractDescription(markdown: string): string {

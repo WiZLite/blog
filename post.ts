@@ -98,8 +98,8 @@ export function getPosts(): PostMeta[] {
 }
 
 export function getPost(id: string): Post {
-    const meta =
-        AllPostMeta.find((x) => x.id === id) ??
+    const meta = process.env.NODE_ENV === "production" ?
+        AllPostMeta.find((x) => x.id === id) : 
         getMetaFromFileName(
             fs.readdirSync(PostsDirectory).find((x) => x.includes(id))
         );

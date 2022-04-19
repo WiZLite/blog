@@ -43,6 +43,9 @@ hr {
   pre {
     white-space: pre-wrap;
   }
+  p {
+    @apply my-2
+  }
   h1, h2, h3 {
     @apply pb-1 border-b border-b-slate-300 dark:text-gray-300 dark:border-gray-500
   }
@@ -54,6 +57,10 @@ hr {
   }
   h3 {
     @apply text-xl my-2 mt-6 font-medium
+  }
+
+  ul {
+    @apply my-2
   }
 
   :not(pre) > code {
