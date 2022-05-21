@@ -59,7 +59,7 @@ export default function Index({ recentPosts, monthGroups, tagGroups }: StaticPro
               className={`flat p-3 text-lg border border-slate-200 dark:border-slate-800 ${!selectedMonth ? "neum-inset" : "neum interactive "}`}>
               Recent {recentPosts.length} posts
             </li>
-            {Object.entries(monthGroups).map(([yearMonth, posts]) => (
+            {Object.entries(monthGroups).sort((a,b) => a[0] > b[0] ? -1 : 1).map(([yearMonth, posts]) => (
               <li key={yearMonth}
                 onClick={() => setSelectedMonth(yearMonth)}
                 className={`flat p-3 text-lg border border-slate-200 dark:border-slate-800 ${selectedMonth === yearMonth ? "neum-inset" : "neum interactive "

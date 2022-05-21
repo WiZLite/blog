@@ -1,6 +1,7 @@
 ---
 title: Tailwind CSSと和解した話
 tags: [CSS, "Tailwind", "Web"]
+updated_at: 2022-05-21
 ---
 
 既に白熱した議論が交わされたTailwindCSSですが、実際に使ってみて「巷に上がるデメリットを読んで敬遠するぐらいなら、一度使ってみてほしい」
