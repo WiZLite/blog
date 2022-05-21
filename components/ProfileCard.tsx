@@ -1,5 +1,6 @@
 import { useAtom } from "jotai"
 import Image from "next/image"
+import { useEffect } from "react"
 import { themeAtom } from "../pages/_app"
 
 const skills: [name: string, icon?: string][] = [

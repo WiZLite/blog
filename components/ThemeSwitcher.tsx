@@ -1,9 +1,11 @@
 import { useAtom } from "jotai"
 import { themeAtom } from "../pages/_app"
 
+export const ThemeSwitcherId = "theme-switcher"
+
 export default function ThemeSwitcher() {
     const [theme, setTheme] = useAtom(themeAtom);
-    return <span onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+    return <span id={ThemeSwitcherId} onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
         {theme === "dark" ?
             <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 fill-indigo-600" viewBox="0 0 20 20" fill="currentColor">
                 <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
