@@ -38,7 +38,7 @@ export function getStaticProps({ params: { id } }): { props: StaticProps } {
                 .filter(x => x.id !== post.id && x.tags && post.tags
                     .find(t => x.tags.includes(t))).slice(0, 5) : null,
             recentPosts: AllPostMeta.filter(x => x.id !== post.id)
-                .sort((a, b) => a.created_at > b.created_at ? 1 : -1)
+                .sort((a, b) => a.created_at > b.created_at ? -1 : 1) // desc
                 .slice(0, 5)
         }
     }

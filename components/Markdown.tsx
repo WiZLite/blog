@@ -4,6 +4,11 @@ import { marked } from "marked";
 import hljs from "highlight.js/lib/core"
 import xml from 'highlight.js/lib/languages/xml';
 import csharp from "highlight.js/lib/languages/csharp";
+import javascript from "highlight.js/lib/languages/javascript";
+import typescript from "highlight.js/lib/languages/typescript";
+import css from "highlight.js/lib/languages/css";
+import rust from "highlight.js/lib/languages/rust";
+import clojure from "highlight.js/lib/languages/clojure";
 // import 'highlight.js/styles/github-dark.css';
 import ReactDOM from "react-dom"
 import Head from "next/head";
@@ -13,6 +18,11 @@ import { themeAtom } from "../pages/_app";
 
 hljs.registerLanguage('xml', xml);
 hljs.registerLanguage("csharp", csharp);
+hljs.registerLanguage("js", javascript);
+hljs.registerLanguage("typescript", typescript);
+hljs.registerLanguage("css", css);
+hljs.registerLanguage("rust", rust);
+hljs.registerLanguage("clojure", clojure);
 
 interface Props {
     markdown: string

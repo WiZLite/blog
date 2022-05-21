@@ -10,8 +10,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.9.0",
-    "@emotion/styled": "^11.8.1",
     "color": "^4.2.1",
     "core-js": "^3.21.1",
     "front-matter": "^4.0.2",
