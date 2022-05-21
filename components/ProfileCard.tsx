@@ -6,7 +6,7 @@ const skills: [name: string, icon?: string][] = [
 ["C#", "/brandIcons/csharp.png"], ["Blazor(ASP.NET Core)", "/brandIcons/blazor.png"], ["Unity", "/brandIcons/unity.webp"], 
 ["React", "/brandIcons/react-icon.png"], ["Typescript", "/brandIcons/typescript.png"], ["GraphQL", "/brandIcons/graphql.png"], 
 ["Hasura", "/brandIcons/hasura.webp"], ["NodeJS", "/brandIcons/nodejs.png"], ["HTML", "/brandIcons/html.png"], 
-["CSS", "/brandIcons/css.webp"]]
+["CSS", "/brandIcons/css.webp"], ["Clojure", "/brandIcons/clojure.png"]]
 
 const interests = ["Graphic", "WebGPU", "Shader", "WASM", "Parsing", "LLVM", "SFX", "VFX", "Sound", "Synth", "3DMotion", "3DModel", "Library"]
 
@@ -21,9 +21,9 @@ export default function ProfileCard() {
             <h3 className="mb-2">
                 {light ? "Software Engineer" : "A Programmer / Creator"}</h3>
             <h3 className='mb-2'>
-                <span className='align-middle break-normal'>
+                <div className='align-middle break-normal'>
                     {light ? "Skills:" : "Interested in"}
-                </span>
+                </div>
                 {light ? <ul className='inline'>
                     {skills.map(([name, url]) => (
                         <li key={name} className='group relative neum-sm inline-block align-middle w-10 h-10 p-1 m-1'>

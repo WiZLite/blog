@@ -42,7 +42,7 @@ export default function Index({ recentPosts, monthGroups, tagGroups }: StaticPro
       <div className='flex xs:flex-col justify-center xs:w-full lg:mx-12'>
         <div className='p-2 flex-initial w-2/3 xs:w-full neum'>
           <h1 className='text-3xl font-semibold text-gray-500 dark:text-gray-300 text-center mb-2'>
-            {selectedMonth ?? "Recent Posts"}
+            {selectedMonth ?? `Recent ${recentPosts.length} posts`}
           </h1>
           <div className='flex flex-wrap xs:block'>
             {(selectedMonth ? monthGroups[selectedMonth] : recentPosts).map(x => <PostSummary key={x.id} post={x} />)}
