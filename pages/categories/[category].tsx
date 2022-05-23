@@ -54,7 +54,7 @@ export default function CategoryPage({ category, posts }: StaticProps) {
         <Header />
         <h1 className="text-4xl text-center text-gray-400 mb-6">Category: {category}</h1>
         <hr/>
-        <div className="w-2/3 mx-auto flex flex-wrap">
+        <div className="md:w-2/3 mx-auto flex flex-wrap">
             {posts.map(x => (
                 <PostSummary post={x} key={x.id} />
             ))}
