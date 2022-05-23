@@ -9,6 +9,9 @@ import typescript from "highlight.js/lib/languages/typescript";
 import css from "highlight.js/lib/languages/css";
 import rust from "highlight.js/lib/languages/rust";
 import clojure from "highlight.js/lib/languages/clojure";
+import toml from "highlight.js/lib/languages/ini";
+import sh from "highlight.js/lib/languages/shell";
+import wasm from "highlight.js/lib/languages/wasm";
 // import 'highlight.js/styles/github-dark.css';
 import ReactDOM from "react-dom"
 import Head from "next/head";
@@ -23,6 +26,9 @@ hljs.registerLanguage("typescript", typescript);
 hljs.registerLanguage("css", css);
 hljs.registerLanguage("rust", rust);
 hljs.registerLanguage("clojure", clojure);
+hljs.registerLanguage("toml", toml);
+hljs.registerLanguage("shell", sh);
+hljs.registerLanguage("wasm", wasm);
 
 interface Props {
     markdown: string
