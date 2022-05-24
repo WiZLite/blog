@@ -86,7 +86,9 @@ https://github.com/WiZLite/blog/commit/bab7099949a7af8172df92d231dd825553af44f5
 
 ## 何を正とするか 
 これら２つの記事を参考にしたいと思います。両者とも出どころはたしかで、１つ目はわかりやすい例文が乗っていて、分析的です。２つ目は確固たるルールを提示していて、大変ありがたいです。
+
 https://kotobaken.jp/qa/yokuaru/qa-53/
+
 https://hontolab.org/tips-for-research-activity/how-to-use-comma/
 
 ### 係助詞「は」の後の読点を打つべきか
