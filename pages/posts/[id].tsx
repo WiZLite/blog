@@ -51,7 +51,7 @@ export default function PostPage({ post, readNexts, recentPosts }: StaticProps) 
             <meta key="og-title" property="og:title" content={post.title} />
             <meta key="og-type" property="og:type" content="article" />
             <meta key="og-url" property="og:url" content="https://wizlite.jp" />
-            <meta key="og-image" property="og:image" content={"https://github.com/WiZLite/BlogStudio/issues/1#issue-1118175079"} />
+            <meta key="og-image" property="og:image" content="https://user-images.githubusercontent.com/7351910/151657931-4470d45d-ed5b-48b2-a610-55429ad871ad.png" />
             <meta key="og-site_name" property="og:site_name" content="Neuromancy" />
             <meta key="og-description" property="og:description" content={extractDescription(post.markdown)} />
         </Head>
