@@ -20,11 +20,11 @@ function PostSummaryInternal({ post }: Props) {
             </Link>
             <hr className="xs:hidden" />
             <div>
-                <span className="ml-2 text-gray-500 text-sm">
+                <span className="ml-2 text-gray-500 text-xs">
                     Created: {post.created_at.toLocaleDateString()}
                 </span>
                 {post.updated_at && (
-                    <span className="ml-2 text-gray-500 text-sm">
+                    <span className="ml-2 text-gray-500 text-xs">
                         Updated: {post.updated_at.toLocaleDateString()}
                     </span>
                 )}
